@@ -56,7 +56,7 @@ Together, let’s turn your aspirations into achievements and your adventures in
 ---
 
 ## 🎥 Video Demo
-Experience Wanderlust in action: [Wanderlust Video Demo](#) 🎥
+Experience Wanderlust in action: [Wanderlust Video Demo](https://drive.google.com/file/d/1X7meNYI6Rr8nvA_s4IB870HE884IN12C/view?usp=sharing) 🎥
 
 ## 🔗 Prototype
 Dive into the working prototype: [Wanderlust Prototype](#) 🔧

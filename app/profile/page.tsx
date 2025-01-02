@@ -47,9 +47,9 @@ const ProfilePage = () => {
 
     const updatedProfile: UpdateProfileRequest = {
       username,
-      // points,
-      // completed_activities: completedActivities,
-      // achievements: achievements ? achievements.split(',').map(item => item.trim()) : [],
+      points,
+      completed_activities: completedActivities,
+      achievements: achievements ? achievements.split(',').map(item => item.trim()) : [],
       avatar_url: avatarUrl,
     };
 
@@ -90,7 +90,6 @@ const ProfilePage = () => {
   return (
     <div className="min-h-screen bg-background px-4 py-8">
       <Card className="max-w-xl mx-auto border-0 shadow-xl overflow-hidden bg-card/50 backdrop-blur">
-        {/* Profile Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 p-6 sm:p-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-white/10 mask-gradient"></div>
           <div className="relative flex flex-col items-center space-y-4">
@@ -115,7 +114,6 @@ const ProfilePage = () => {
           </div>
         </div>
 
-        {/* Alerts */}
         {error && (
           <Alert variant="destructive" className="rounded-none border-l-4">
             <AlertDescription>{error}</AlertDescription>
@@ -127,7 +125,6 @@ const ProfilePage = () => {
           </Alert>
         )}
 
-        {/* Stats Cards */}
         <div className="grid grid-cols-2 gap-3 p-4 sm:p-6">
           <Card className="bg-card/50 hover:bg-card/80 transition-colors">
             <CardContent className="p-4">
@@ -149,7 +146,6 @@ const ProfilePage = () => {
           </Card>
         </div>
 
-        {/* Form Section */}
         <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-6">
           <div className="space-y-4">
             <div>
@@ -168,7 +164,7 @@ const ProfilePage = () => {
                 <Input
                   type="number"
                   value={points}
-                  // onChange={(e) => setPoints(Number(e.target.value))}
+                  onChange={(e) => setPoints(Number(e.target.value))}
                   className="bg-card"
                 />
               </div>
@@ -178,7 +174,7 @@ const ProfilePage = () => {
                 <Input
                   type="number"
                   value={completedActivities}
-                  // onChange={(e) => setCompletedActivities(Number(e.target.value))}
+                  onChange={(e) => setCompletedActivities(Number(e.target.value))}
                   className="bg-card"
                 />
               </div>
@@ -188,7 +184,7 @@ const ProfilePage = () => {
               <label className="block text-sm font-medium mb-1">Achievements</label>
               <Textarea
                 value={achievements}
-                // onChange={(e) => setAchievements(e.target.value)}
+                onChange={(e) => setAchievements(e.target.value)}
                 className="bg-card"
                 rows={3}
               />
